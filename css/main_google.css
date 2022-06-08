@@ -1,0 +1,181 @@
+body {
+    margin:0;
+    margin-bottom:25px;
+    padding:0;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a{
+    text-decoration: none; /*Quita los bordes inferiores de la etiqueta a*/
+    cursor:pointer; /*Crear una mano encima de los botónes*/
+}
+
+header{
+    width:100%;
+    height:60px;
+}
+
+header nav {
+    display: flex; /*Crea el display de forma horizontal.*/
+    justify-content: flex-end;/*Donde end es a la derecha y start es a la izquierda.*/
+}
+
+header nav .nav-right-section{
+    width: 250px; /*El header que lleva dentro estas etiquetas, permite que se mueva de acuerdo al rango a escoger.*/
+    height: auto;/*Como el contenedor padre del header, ya tiene definido una altura, no puede ser más alto que el mismo, así que queda en auto*/
+    display: flex; /*El display flex, me trae una tira horizantal del display, así que como resultado, torna la lista vertical, en una horizontal*/
+    list-style: none; /*Quita el botón negro de la lista*/
+    justify-content: center; /*Dentro del display horizontal creado, obtengo con esto un centrado de los elementos dentro del diplay*/
+    align-items: center; /*Centra en el eje x en su punto medio*/
+}
+nav .nav-right-section a{ /*Se para los iconos dentro del nav a*/
+    margin-right: 15px;
+    color: #000000;
+}
+
+nav .nav-right-section .menu-icon{/*Dentro del contenedor nav, dentro de una clase "nav-right-section traer una clase "menu-icon"*/
+    background-image: url("https://cdn-icons-png.flaticon.com/512/162/162740.png");/*Se extrae la imagen por una url*/
+    background-repeat: no-repeat;/*Para que no se rellene el espacio con la misma imagen en caso de que suceda*/
+    background-position:  center; /*Se inciste en que la imagen quede al centro*/
+    background-size: contain; /*Ajusta el contenido al porte del contenedor*/
+    width: 20px; /*La imagen queda del porte seleccionado*/
+    height: 20px;
+    margin-left:19px; /*Margen a su izquierda*/
+    margin-right:15px;/*Margen a su derecha*/
+}
+
+nav .nav-right-section a img{ /*De la etiqueta nav que tenga una clase .nav-right-section que tenga a dentro una etiqueta a y dentro una etiqueta img*/
+    width: 35px;
+    border-radius: 50px;/*Se ajusta los bordes de la imagen*/
+    margin-left:15px;
+}
+
+main{   /*Se crea distancia entre el header y el main*/
+    margin-top: 150px;
+    text-align: center; /*Se alinea los elementos al centro*/
+}
+
+main .main-logo{ /*Se ajusta el logo de google*/
+    width:530px; /*Se ajusta dimensiones*/
+    margin: 0 auto; /*se crea un amrgin 0 para quitarlo y después centrarlo con auto*/
+    margin-bottom: 35px;
+}
+
+main .main-logo img{
+    width: 270px; /*se ajusta el tamaño del logo*/
+}
+
+main .main-input{
+    width: 525px;
+    margin: 0 auto;
+}
+
+main .main-input-container{ /*se crea un estilo del container del input*/
+    width: 525px;
+    border-radius: 100px;
+    border: 1px solid #dfe1e5;/*borde del contenedor*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main-input input{
+    width: 450px;
+    height: 40px;
+    border: none; /*Quita el borde del input*/
+    outline: none; /*El grosor de la linea lo modifica, en este caso queda none*/
+}
+
+main .main-input-container:hover{/*permite crear un efecto al pasar el mauso por encima*/
+    box-shadow: 0 1px 6px 0 #20212447;
+    border-color: #dfe1e500;
+}
+
+main .main-input .search-icon{
+    background-image:url('https://icons-for-free.com/download-icon-explore+find+magnifier+search+icon-1320185008030646474_512.png');
+    background-repeat:no-repeat;/**Nuevamente para que no se llene los espacios vacios con parte de la misma imagen/*/
+    background-position:center;
+    background-size: contain;
+    width:18px;
+    height:18px;
+}
+
+main .main-input .micro-icon{
+    background-image:url('https://i.pinimg.com/originals/ea/5f/5b/ea5f5bd3b4110f2afb958049b4096d3a.png');
+    background-repeat:no-repeat;/**Nuevamente para que no se llene los espacios vacios con parte de la misma imagen/*/
+    background-position:center;
+    background-size: contain;
+    width:23px;
+    height:23px;
+    cursor: pointer;
+}
+
+main .main-buttons{
+    width:530px;
+    margin:0 auto;
+    margin-top: 10px;
+}
+
+main .main-buttons div{
+    display:inline-block;
+}
+
+main .main-buttons button{
+    height: 36px;
+    background-color: #f2f2f2;
+    border: 0;
+    font-size: 14px;
+    color: #5f6368;
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-right: 15px;
+}
+
+main .main-buttons button:hover{
+    border: 1px solid #c7c7c7;
+    box-shadow: 0px 1px 1px rgba(0,0,0,0.1);
+    color: #222;
+    background-color: #f8f8f8;
+}
+
+/*main .main-buttons{
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    /*align-items: center;*/
+/*}*/
+
+footer{
+    width:100%;
+    height:5px;
+    position: absolute;
+    bottom:0;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    font-size: 13px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #e4e4e4;
+}
+
+footer ul{
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+footer .footer-left{
+    justify-self: left;
+}
+
+footer .footer-left{
+    justify-self: right;
+}
+
+footer ul li a{
+    margin: 10px;
+    color: #5f6368;
+}
+
